@@ -84,6 +84,24 @@ void KeySender::sendPrev()
     #endif // __linux__
 }
 
+void KeySender::stopPres()
+{
+    #ifdef _WIN32
+		end_Pres();
+    #endif // _WIN32
+
+  
+}
+
+void KeySender::begin()
+{
+    #ifdef _WIN32
+		begin_presentation();
+    #endif // _WIN32
+
+   
+}
+
 #ifdef __linux__
     void KeySender::socketError(const QAbstractSocket::SocketError socketError)
     {
